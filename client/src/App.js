@@ -6,6 +6,7 @@ import Rounds from './components/Rounds.js';
 import useStyles from './styles';
 import PlayerDisplay from './components/PlayerDisplay/PlayerDisplay.js'
 import tournamentGenerator from './functions/tournamentGenerator.js';
+import TeamDisplay from './components/TeamDisplay.js';
 
 const App = () => {
 
@@ -32,19 +33,9 @@ const App = () => {
                         Team Randomizer
                     </Typography>
                 </AppBar>
-                {/*<Accordion>
-                    <AccordionSummary>
-                        Test
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <ul>
-                            <li>TestItem</li>
-                            <li>TestItem2</li>
-                        </ul>
-                    </AccordionDetails>
-                </Accordion>*/}
                 <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
                 <PlayerDisplay names={players} setNames={setPlayers}></PlayerDisplay>
+                <TeamDisplay tournament={tournament}></TeamDisplay>
             </Container>
         </>
     )
