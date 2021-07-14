@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core'
 
-const TeamDisplay = ({names}) => {
+const TeamDisplay = ({teams}) => {
 
     //here need to get data about players from player/playerdisplay and put in array
 
     return (
-        <Grid spacing={12}>
+        <Grid container spacing={3}>
             {/*here need to map player data array and create elements*/}
         </Grid>
     );
