@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core'
 
-const TeamDisplay = ({players}) => {
+const TeamDisplay = ({names}) => {
 
     //here need to get data about players from player/playerdisplay and put in array
 

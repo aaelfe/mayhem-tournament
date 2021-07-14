@@ -12,6 +12,6 @@ export default makeStyles((theme) => ({
     rounds: {
         display:'flex',
         margin: "100px 0",
-        flexDirection:'row'
+        flexDirection:'row',
     }
 }));
