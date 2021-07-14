@@ -4,12 +4,17 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 //import routes
+import playerRoutes from './routes/players.js';
+import { createPlayer } from './controllers/players.js';
 
 const app = express();
 dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded())
+app.use(cors());
+
+app.use('/players', playerRoutes)
 
 app.get('/', (req, res) => {
     res.send('Hello');

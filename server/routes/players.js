@@ -1,10 +1,11 @@
 import express from 'express';
 //import controllers here
-import {} from '../controllers.player.js';
+import { getPlayers, createPlayer } from '../controllers/players.js';
 
-const router=express.Router();
+const playerRoutes=express.Router();
 
 //create routes here
+playerRoutes.get('/', getPlayers);
+playerRoutes.post('/', createPlayer);
 
-
-export default router;
+export default playerRoutes;
