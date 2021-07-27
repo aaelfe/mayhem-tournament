@@ -29,13 +29,15 @@ const App = () => {
         <>
             <Container>
                 <AppBar className={classes.appBar}>
-                    <Typography variant="h2">
+                    <Typography variant="h3">
                         Team Randomizer
                     </Typography>
                 </AppBar>
-                <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
-                <PlayerDisplay names={players} setNames={setPlayers}></PlayerDisplay>
-                <TeamDisplay tournament={tournament}></TeamDisplay>
+                <div className={classes.content}>
+                    <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
+                    <PlayerDisplay names={players} setNames={setPlayers}></PlayerDisplay>
+                    <TeamDisplay tournament={tournament}></TeamDisplay>
+                </div>
             </Container>
         </>
     )

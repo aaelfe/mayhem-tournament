@@ -5,13 +5,15 @@ export default makeStyles((theme) => ({
         borderRadius:10,
         margin: "15px 0",
         display: 'flex',
-        flexDirection:'row',
+        flexDirection: 'row',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
     },
     rounds: {
-        display:'flex',
-        margin: "100px 0",
-        flexDirection:'row',
+        display:'inline-block',
+        margin: "0 0",
+    },
+    content: {
+        margin: '100px 0 0 0'
     }
 }));
