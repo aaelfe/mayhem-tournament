@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Container, ListItem, ListItemText, ListItemSecondaryAction, IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete'
 import '@fontsource/roboto';
+import useStyles from './styles';
 
 const Player = ({ name }) => {
     return (

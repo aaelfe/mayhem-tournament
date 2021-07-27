@@ -13,7 +13,14 @@ export default makeStyles((theme) => ({
         display:'inline-block',
         margin: "0 0",
     },
+    players: {
+        display:'inline-block'
+    },
+    tournament: {
+
+    },
     content: {
-        margin: '100px 0 0 0'
+        margin: '100px 0 0 0',
+        width: '160vh'
     }
 }));

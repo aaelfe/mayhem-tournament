@@ -35,8 +35,8 @@ const App = () => {
                 </AppBar>
                 <div className={classes.content}>
                     <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
-                    <PlayerDisplay names={players} setNames={setPlayers}></PlayerDisplay>
-                    <TeamDisplay tournament={tournament}></TeamDisplay>
+                    <PlayerDisplay className={classes.players} names={players} setNames={setPlayers}></PlayerDisplay>
+                    <TeamDisplay className={classes.tournament} tournament={tournament}></TeamDisplay>
                 </div>
             </Container>
         </>

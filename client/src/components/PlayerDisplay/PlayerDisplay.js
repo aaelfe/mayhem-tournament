@@ -3,6 +3,7 @@ import { Typography, List, ListItem, ListItemText, Divider, Container, Paper, Te
 import DeleteIcon from '@material-ui/icons/Delete'
 import Player from './Player/Player.js'
 import '@fontsource/roboto';
+import useStyles from './styles';
 
 const PlayerDisplay = ({ names, setNames }) => {
     return (
