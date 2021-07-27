@@ -21,6 +21,7 @@ export default makeStyles((theme) => ({
     },
     content: {
         margin: '100px 0 0 0',
-        width: '160vh'
+        width: '160vh',
+        alignItems: 'center'
     }
 }));
