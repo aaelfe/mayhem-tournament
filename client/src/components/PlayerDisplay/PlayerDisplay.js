@@ -17,7 +17,12 @@ const PlayerDisplay = ({ players, setPlayers }) => {
 
         if(newPlayer) {
             api.createPlayer(newPlayer);
+            clear();
         }
+    }
+
+    const clear = () => {
+        setNewPlayer({name:''});
     }
 
     return (
