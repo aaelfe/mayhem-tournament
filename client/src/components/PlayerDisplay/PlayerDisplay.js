@@ -30,9 +30,9 @@ const PlayerDisplay = ({ players, setPlayers }) => {
     }
 
     api.fetchPlayers()
-                .then(res => {
-                    setPlayers(res.data);
-                });
+        .then(res => {
+            setPlayers(res.data);
+        });
 
     return (
             <Paper className={classes.paper}>

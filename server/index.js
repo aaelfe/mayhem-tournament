@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 
 //import routes
 import playerRoutes from './routes/players.js';
-import { createPlayer } from './controllers/players.js';
 
 const app = express();
 dotenv.config();

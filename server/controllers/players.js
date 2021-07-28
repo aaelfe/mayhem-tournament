@@ -23,3 +23,8 @@ export const createPlayer = async (req, res) => {
         res.status(409).json({error});
     }
 }
+export const deletePlayer = async (req, res) => {
+    const {_id} = req.params;
+    await Player.findByIdAndRemove(_id);
+    res.json({message: 'Player deleted'});
+}
