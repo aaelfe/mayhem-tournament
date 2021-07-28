@@ -1,13 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Typography, List, ListItem, ListItemText, Divider, Container, Paper, TextField, Button, Grid } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete'
-import Player from './Player/Player.js'
+import DeleteIcon from '@material-ui/icons/Delete';
+import Player from './Player/Player.js';
 import '@fontsource/roboto';
 import useStyles from './styles';
+import * as api from '../../api';
 
 
 const PlayerDisplay = ({ players, setPlayers }) => {
     const classes=useStyles();
+
+    const [newPlayer, setNewPlayer] = useState({name:''});
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(newPlayer) {
+            api.createPlayer(newPlayer);
+        }
+    }
 
     return (
             <Paper className={classes.paper}>
@@ -18,9 +29,9 @@ const PlayerDisplay = ({ players, setPlayers }) => {
                         })
                     }
                 </List>
-                <form autoComplete="off" noValidate>
-                    <TextField name="newPlayer" variant="outlined" label="New Player" fullWidth value='test' onChange={(e)=>{}}/>
-                    <Button variant="contained" size="small" type="submit" fullWidth>Submit</Button>
+                <form autoComplete="off" noValidate onSubmit={handleSubmit}>
+                    <TextField name="newPlayer" variant="outlined" label="New Player" fullWidth value={newPlayer.name} onChange={(e)=>{setNewPlayer({name:e.target.value})}}/>
+                    <Button variant="contained" size="small" type="submit" fullWidth>Add</Button>
                 </form>
             </Paper>
     )
