@@ -16,13 +16,6 @@ const App = () => {
 
     const classes=useStyles();
 
-    useEffect(() => {
-        setTournament(tournamentGenerator(players, rounds));
-    }, [players]);
-    useEffect(() => {
-        console.log('test');
-    }, [rounds]) //For this to work best might want to fix issue where rounds updates for anything typed in box
-
     //teamGenerator([{name: "allan", id:1}, {name: "josh", id:2}, {name: "ethan", id:3}, {name: "steve", id:4}, {name: "ben", id:5}], 5); TEST
 
     return (
@@ -35,7 +28,7 @@ const App = () => {
                 </AppBar>
                 <div className={classes.content}>
                     <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
-                    <PlayerDisplay className={classes.players} players={[{name:'allan'},{name:'steve'}]} setPlayers={setPlayers}></PlayerDisplay>
+                    <PlayerDisplay className={classes.players} players={players} setPlayers={setPlayers}></PlayerDisplay>
                     <TeamDisplay className={classes.tournament} tournament={tournament}></TeamDisplay>
                 </div>
             </Container>

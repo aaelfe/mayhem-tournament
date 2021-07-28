@@ -15,9 +15,13 @@ const PlayerDisplay = ({ players, setPlayers }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(newPlayer) {
+        if(newPlayer.name!='') {
             api.createPlayer(newPlayer);
             clear();
+            api.fetchPlayers()
+                .then(res => {
+                    setPlayers(res.data);
+                });
         }
     }
 
@@ -25,13 +29,18 @@ const PlayerDisplay = ({ players, setPlayers }) => {
         setNewPlayer({name:''});
     }
 
+    api.fetchPlayers()
+                .then(res => {
+                    setPlayers(res.data);
+                });
+
     return (
             <Paper className={classes.paper}>
                 <List>
                     {
-                        players.map((player) => {
+                        players.map((player) => (
                             <Player name={player.name}></Player>
-                        })
+                        ))
                     }
                 </List>
                 <form autoComplete="off" noValidate onSubmit={handleSubmit}>
