@@ -3,13 +3,14 @@ import { Typography, Container, ListItem, ListItemText, ListItemSecondaryAction,
 import DeleteIcon from '@material-ui/icons/Delete'
 import '@fontsource/roboto';
 import useStyles from './styles';
+import * as api from '../../../api/index.js';
 
-const Player = ({ name }) => {
+const Player = ({ player }) => {
     return (
         <ListItem>
-            <ListItemText primary={name}/>
+            <ListItemText primary={player.name}/>
             <ListItemSecondaryAction>
-                <IconButton edge="end" aria-label="delete">
+                <IconButton edge="end" aria-label="delete" onClick={()=>api.deletePlayer(player._id)}> 
                     <DeleteIcon />
                 </IconButton>
             </ListItemSecondaryAction>

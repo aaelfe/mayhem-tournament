@@ -39,7 +39,7 @@ const PlayerDisplay = ({ players, setPlayers }) => {
                 <List>
                     {
                         players.map((player) => (
-                            <Player name={player.name}></Player>
+                            <Player player={player}></Player>
                         ))
                     }
                 </List>
