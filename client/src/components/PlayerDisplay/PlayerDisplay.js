@@ -6,19 +6,15 @@ import '@fontsource/roboto';
 import useStyles from './styles';
 
 
-//WHY IS THIS STILL DISPLAYING something??
-
-
-
-const PlayerDisplay = ({ names, setNames }) => {
+const PlayerDisplay = ({ players, setPlayers }) => {
     const classes=useStyles();
 
     return (
             <Paper className={classes.paper}>
                 <List>
                     {
-                        names.map((player, index) => {
-                            <Player name={player}></Player>
+                        players.map((player) => {
+                            <Player name={player.name}></Player>
                         })
                     }
                 </List>

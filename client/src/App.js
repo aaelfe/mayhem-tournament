@@ -35,7 +35,7 @@ const App = () => {
                 </AppBar>
                 <div className={classes.content}>
                     <Rounds className={classes.rounds} rounds={rounds} setRounds={setRounds}></Rounds>
-                    <PlayerDisplay className={classes.players} names={players} setNames={setPlayers}></PlayerDisplay>
+                    <PlayerDisplay className={classes.players} players={[{name:'allan'},{name:'steve'}]} setPlayers={setPlayers}></PlayerDisplay>
                     <TeamDisplay className={classes.tournament} tournament={tournament}></TeamDisplay>
                 </div>
             </Container>
