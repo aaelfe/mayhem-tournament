@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
-import Player from './player.js';
+import * as player from './player.js';
 
 const teamSchema = mongoose.Schema({
-    players: [Player]
+    players: {
+        type:[player.playerSchema]
+    }
 });
 
-const Team = mongoose.model('Team', teamSchema);
+//const Team = mongoose.model('Team', teamSchema);
 
-export default Team;
+export default teamSchema;

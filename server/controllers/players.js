@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 //import model here
-import Player from '../models/player.js';
+import * as player from '../models/player.js';
 
 //create (and export) controllers here
 export const getPlayers = async (req, res) => {
     try {
-        const players = await Player.find();
+        const players = await player.Player.find();
 
         res.status(200).json(players);
     } catch (error) {
@@ -14,7 +14,7 @@ export const getPlayers = async (req, res) => {
 }
 
 export const createPlayer = async (req, res) => {
-    const newPlayer = new Player(req.body);
+    const newPlayer = new player.Player(req.body);
 
     try {
         await newPlayer.save();
@@ -25,6 +25,6 @@ export const createPlayer = async (req, res) => {
 }
 export const deletePlayer = async (req, res) => {
     const {_id} = req.params;
-    await Player.findByIdAndRemove(_id);
+    await player.Player.findByIdAndRemove(_id);
     res.json({message: 'Player deleted'});
 }

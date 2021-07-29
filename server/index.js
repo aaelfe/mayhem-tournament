@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 //import routes
 import playerRoutes from './routes/players.js';
+import tournamentRoutes from './routes/tournaments.js';
 
 const app = express();
 dotenv.config();
@@ -13,7 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded())
 app.use(cors());
 
-app.use('/players', playerRoutes)
+app.use('/players', playerRoutes);
+app.use('/tournaments', tournamentRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello');

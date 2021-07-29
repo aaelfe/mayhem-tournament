@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
-import Team from './team.js';
+import teamSchema from './team.js';
 
 const roundSchema = mongoose.Schema({
-    teams: [Team]
+    teams: {
+        type: [teamSchema]
+    }
 });
 
-const Round = mongoose.model('Round', roundSchema);
+//const Round = mongoose.model('Round', roundSchema);
 
-export default Round;
+export default roundSchema;

@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
-import Round from './round.js'
+import roundSchema from './round.js'
 
-const tournamentScheme = mongoose.Schema({
-    rounds: [Round]
+const tournamentSchema = mongoose.Schema({
+    rounds: {
+        type: [roundSchema]
+    }
 });
 
 const Tournament = mongoose.model('Tournament', tournamentSchema);
