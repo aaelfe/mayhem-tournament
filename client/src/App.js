@@ -16,7 +16,7 @@ const App = () => {
 
     const classes=useStyles();
 
-    //teamGenerator([{name: "allan", id:1}, {name: "josh", id:2}, {name: "ethan", id:3}, {name: "steve", id:4}, {name: "ben", id:5}], 5); TEST
+    //tournamentGenerator([{name: "allan", id:1}, {name: "josh", id:2}, {name: "ethan", id:3}, {name: "steve", id:4}, {name: "ben", id:5}], 5, 5);
 
     return (
         <>
