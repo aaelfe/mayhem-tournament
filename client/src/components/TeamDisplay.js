@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, Typography, Paper } from '@material-ui/core'
+import { Grid, Typography, Paper, Accordion, AccordionDetails, AccordionSummary, AccordionActions } from '@material-ui/core';
 import useStyles from './styles';
+import { ExpandMoreIcon, DeleteIcon } from '@material-ui/icons';
 
 const TeamDisplay = ({tournament}) => {
     const classes=useStyles();
